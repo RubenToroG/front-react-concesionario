@@ -3,9 +3,11 @@ import React from 'react'
 
 const PrivateLayout = ({ children }) => {
     return (
-        <div>
+        <div className='flex w-screen h-screen'>
             <Sidebar />
+            <main className='flex w-full overflow-y-scroll'>
             {children}
+            </main>
         </div>
     )
 }
