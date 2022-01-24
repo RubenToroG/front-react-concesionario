@@ -1,11 +1,13 @@
+import { useDarkMode } from 'context/darkMode'
 import React from 'react'
 
-const Index = () => {
+const Admin = () => {
+    const { darkMode } = useDarkMode()
     return (
-        <div>
+        <div className={`flex w-full h-full ${darkMode ? "bg-gray-50" : "bg-gray-800/95"}`}>
             Index del panel de administración
         </div>
     )
 }
 
-export default Index
+export { Admin }
