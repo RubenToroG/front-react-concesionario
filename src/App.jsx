@@ -24,8 +24,12 @@ function App() {
         <Router>
           <Routes>
             <Route path='/admin' element={<PrivateLayout><Admin /></PrivateLayout>} />
+            <Route path='/admin/user' element={<PrivateLayout><Admin /></PrivateLayout>} />
             <Route path='/admin/vehiculos' element={<PrivateLayout><Vehiculos /></PrivateLayout>} />
             <Route path='/admin/clientes' element={<PrivateLayout><Clientes /></PrivateLayout>} />
+            <Route path='/admin/ventas' element={<PrivateLayout><Admin /></PrivateLayout>} />
+            <Route path='/admin/usuarios' element={<PrivateLayout><Admin /></PrivateLayout>} />
+
             <Route path='/login' element={<AuthLayout><Login /></AuthLayout>} />
             <Route path='/registro' element={<AuthLayout><Registro /></AuthLayout>} />
             <Route path='/' element={<PublicLayout><Index /></PublicLayout>} exact />
