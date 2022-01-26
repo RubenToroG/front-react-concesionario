@@ -5,7 +5,7 @@ import 'styles/responsive.css'
 
 const Sidebar = () => {
     return (
-        <nav className='sidebar w-72 border border-x-gray-300 bg-cyan-700 text-white flex flex-col p-4'>
+        <nav className='hidden md:flex md:w-72 border border-x-gray-300 bg-cyan-700 text-white flex-col p-4'>
             <button><Link to='/admin'><ImagenLogo /></Link></button>
             <div>
                 <Ruta icono='fas fa-user' ruta='/admin/user' nombre='Perfil' />
