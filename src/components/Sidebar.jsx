@@ -1,7 +1,8 @@
 import ImagenLogo from './ImagenLogo'
-import React from 'react'
-import { Link } from 'react-router-dom'
+import {React, useEffect, useState} from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import 'styles/responsive.css'
+import useActiveRoute from 'hooks/useActiveRoute'
 
 const Sidebar = () => {
     return (
@@ -10,7 +11,7 @@ const Sidebar = () => {
             <div>
                 <Ruta icono='fas fa-user' ruta='/admin/user' nombre='Perfil' />
                 <Ruta icono='fas fa-car' ruta='/admin/vehiculos' nombre='Vehiculos' />
-                <Ruta icono='fas fa-car' ruta='/admin/clientes' nombre='Clientes' />
+                <Ruta icono='fas fa-users' ruta='/admin/clientes' nombre='Clientes' />
                 <Ruta icono='fas fa-cash-register' ruta='/admin/ventas' nombre='Ventas' />
                 <Ruta icono='fas fa-users' ruta='/admin/usuarios' nombre='Usuarios' />
             </div>
@@ -20,9 +21,11 @@ const Sidebar = () => {
 }
 
 const Ruta = ({ icono, ruta, nombre }) => {
+    const isActive = useActiveRoute(ruta)
+
     return (
         <Link to={ruta}>
-            <button className='p-1 my-2 flex w-full items-start text-white hover:bg-cyan-800 rounded-md'>
+            <button className={`p-1 my-2 flex w-full items-center text-white ${isActive ? 'bg-cyan-800' : 'bg-cyan.200'} hover:bg-cyan-900 rounded-md`}>
                 <i className={`${icono} w-10`} ></i>
                 {nombre}</button>
         </Link>

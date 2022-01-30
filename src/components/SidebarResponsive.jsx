@@ -15,7 +15,6 @@ const SidebarResponsive = () => {
                 <ResponsiveRoutes icono='fas fa-car' ruta='/admin/vehiculos' nombre='Vehiculos'/>
                 <ResponsiveRoutes icono='fas fa-user' ruta='/admin/user' nombre='Profile'/>
                 <ResponsiveRoutes icono='fas fa-user' ruta='/admin/user' nombre='Profile'/>
-
                 </ul>}
         </div>
     )

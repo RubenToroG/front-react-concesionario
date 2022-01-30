@@ -160,5 +160,4 @@ const FormularioCreacionVehiculos = ({ setMostrarTabla, listaVehiculos, setVehic
     )
 }
 
-
 export default Vehiculos
